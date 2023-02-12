@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Умова:</h2>
+    <p>
+      Задача 6. З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару
+      окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+    </p>
+    <h2>Результат:</h2>
+
+
+
+    <script>
+      let productPrice = parseFloat(prompt('Вартість товару?', 100));
+      let productCount = parseFloat(prompt('Кількість одиниць товару?', 10));
+      const firstProductPrice = productPrice;
+      const firstProductCount = productCount;
+      const firstProductTotalPrice = firstProductPrice * firstProductCount;
+
+      productPrice = parseFloat(prompt('Вартість товару?', 100));
+      productCount = parseFloat(prompt('Кількість одиниць товару?', 10));
+      const secondProductPrice = productPrice;
+      const secondProductCount = productCount;
+      const secondProductTotalPrice = secondProductPrice * secondProductCount;
+
+      productPrice = parseFloat(prompt('Вартість товару?', 100));
+      productCount = parseFloat(prompt('Кількість одиниць товару?', 10));
+      const thirdProductPrice = productPrice;
+      const thirdProductCount = productCount;
+      const thirdProductTotalPrice = thirdProductPrice * thirdProductCount;
+
+
+      const totalPrice = firstProductTotalPrice + secondProductTotalPrice + thirdProductTotalPrice;
+
+      document.write(`
+      <table>
+        <tr>
+          <td>Продукт</td>
+          <td>Першиий</td>
+          <td>Другий</td>
+          <td>Третій</td>
+        </tr>
+        <tr>
+          <td>Кількість</td>
+          <td>${firstProductCount}</td>
+          <td>${secondProductCount}</td>
+          <td>${thirdProductCount}</td>
+        </tr>
+        <tr>
+          <td>Ціна</td>
+          <td>${firstProductTotalPrice}</td>
+          <td>${secondProductTotalPrice}</td>
+          <td>${thirdProductTotalPrice}</td>
+        </tr>
+        <tr>
+          <td>Загальна вартість</td>
+          <td>${totalPrice.toFixed(2)}</td>
+        </tr>
+      </table>
+      `)
+    </script>
+
+    <style>
+      table, tr, td {
+        border: 1px solid #000;
+      }
+
+      table {
+        width: 320px;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

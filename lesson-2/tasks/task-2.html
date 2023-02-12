@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Умова:</h2>
+    <p>
+      Задача 2. Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років.
+    </p>
+    <h2>Результат:</h2>
+
+    <script>
+      const birthYear = parseInt(prompt("Рік народження?", 1991));
+      const today = new Date();
+      const currentYear = today.getFullYear();
+      const age = currentYear - birthYear;
+
+      document.write(`Кількість років - ${age}`);
+    </script>
+  </body>
+</html>
