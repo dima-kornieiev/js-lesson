@@ -14,12 +14,12 @@
     <h2>Результат:</h2>
 
     <script>
-      const randomMonth = Math.random();
-      const randomDay = randomInteger(0, 6);
+      const randomMonth = Math.ceil(Math.random() * 12);
+      const randomDay = Math.ceil(Math.random() * 6);
+      const sum = randomMonth + randomDay;
 
       document.write(`
-        Місяць - ${randomMonth}
-        Число - ${randomDay}
+        Результат - ${sum}
       `)
     </script>
   </body>

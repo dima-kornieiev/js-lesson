@@ -19,7 +19,8 @@
       const SEC_IN_MINUTE = 60
 
       const hours = secLeft / SEC_IN_HOUR;
-      const minutes = secLeft / SEC_IN_MINUTE;
+      const minutes = (secLeft / SEC_IN_MINUTE) % 60;
+
 
       document.write(`
         Годин - ${Math.floor(hours)} <br>
