@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Умова:</h2>
+    <p>
+      Задача 2. З клавіатури вводяться імена двох дітей та кількість у них цукерок. Вивести не екран ім’я тієї дитини, у
+      якої кількість цукерок є більшою, або вивести, що кількість однакова.
+    </p>
+    <h2>Результат:</h2>
+
+    <script>
+      const productPrice = parseFloat(prompt('Product price?'), 1000);
+      const moneyAmount = parseFloat(prompt('Money amount?'), 2000);
+      const lotteryTicketPrice = 4;
+      const moneyAfterPurchase = moneyAmount - productPrice;
+
+      if (moneyAfterPurchase >= lotteryTicketPrice) {
+        document.write('Thank\'s for your purchase. Do you want to buy a lottery?')
+      } else if (moneyAmount >= productPrice) {
+        document.write('Thank\'s for your purchase.')
+      } else {
+        document.write('You don\'t have enough money')
+      }
+    </script>
+
+  </body>
+</html>

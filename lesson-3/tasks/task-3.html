@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Умова:</h2>
+    <p>
+      Задача 3. Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.
+    </p>
+    <h2>Результат:</h2>
+
+    <script>
+      const randomNumber = Math.ceil(Math.random() * 5);
+      const guessNumber = parseInt(prompt('Enter number from 1 to 5', 1));
+
+      if (guessNumber === randomNumber) {
+        document.write(`Yes, it\'s ${guessNumber}`)
+      } else {
+        document.write(`No, it isn't ${guessNumber}. It\'s ${randomNumber}`)
+      }
+    </script>
+  </body>
+</html>
