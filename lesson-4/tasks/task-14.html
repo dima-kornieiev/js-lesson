@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Умова:</h2>
+    <p>
+      Задача 14. Каса. Користувачу повідомляють суму, яку йому треба сплатити.
+      Користувач поступово вводить суму грошей до тих пір, поки суми не буде
+      достатньо для оплати товарів (кожного разу користувачу повідомляють, яку
+      ще суму потрібно ввести).
+    </p>
+    <h2>Результат:</h2>
+
+    <script>
+      let randomPrice = Math.floor(Math.random() * 100 + 1);
+      let userPaid = 0;
+
+      alert(`You have to pay ${randomPrice}`);
+
+      while (randomPrice > 0) {
+        userPaid = parseFloat(prompt("Your payment?"));
+        randomPrice -= userPaid;
+        alert(`You have to pay ${randomPrice}`);
+      }
+
+      document.write("You paid the full amount");
+    </script>
+  </body>
+</html>

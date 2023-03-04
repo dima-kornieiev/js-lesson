@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Умова:</h2>
+    <p>
+      Задача 8. Користувач загадує число. За 3 спроби комп’ютер намагається
+      вгадати число користувача (використати confirm).
+    </p>
+    <h2>Результат:</h2>
+
+    <script>
+      const userMinNumber = 1;
+      const userMaxNumber = 10;
+      const userNumber = parseInt(prompt("User number from 1 to 10?"));
+      let maxGuessAttempts = 3;
+      let computerGuessNumber;
+      let result = "The computer has exhausted all attempts and did not guess";
+
+      for (let attempts = 0; attempts < maxGuessAttempts; attempts++) {
+        computerGuessNumber = Math.floor(
+          Math.random() * (userMaxNumber - userMinNumber + 1) + userMinNumber
+        );
+
+        const isNumberRight = confirm(`is it ${computerGuessNumber}?`);
+
+        if (isNumberRight) {
+          result = "Computer guessed right";
+          break;
+        }
+      }
+
+      document.write(`${result}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Умова:</h2>
+    <p>
+      Задача 13. Морський бій. Комп’ютер випадково розташовує одиночний корабель
+      на полі розміром N*M. Маючи К снарядів користувач намагається потопити
+      корабель.
+    </p>
+    <h2>Результат:</h2>
+
+    <script>
+      const fieldRowNumber = 4;
+      const fieldColumnNumber = 4;
+      let numberOfShells = 3;
+
+      const shipRowCoordinates = Math.floor(Math.random() * fieldRowNumber + 1);
+      const shipColumnCoordinates = Math.floor(
+        Math.random() * fieldColumnNumber + 1
+      );
+
+      console.log(shipRowCoordinates);
+      console.log(shipColumnCoordinates);
+
+      let result = "You lose!";
+
+      for (let i = 0; i < numberOfShells; i++) {
+        let userRowCoordinates = parseInt(prompt("User row coordinates?"));
+        let userColumnCoordinates = parseInt(
+          prompt("User column coordinates?")
+        );
+
+        if (
+          userRowCoordinates === shipRowCoordinates &&
+          userColumnCoordinates === shipColumnCoordinates
+        ) {
+          result = "You won!";
+          break;
+        } else {
+          alert('Missed!')
+        }
+      }
+
+      document.write(`${result}`);
+    </script>
+  </body>
+</html>

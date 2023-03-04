@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Умова:</h2>
+    <p>
+      Задача 6. Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній) за зразком
+    </p>
+    <h2>Результат:</h2>
+
+    <script>
+      const tableAmount = 3;
+      const tableRowAmount = 3;
+      const tableColumnAmount = 3;
+
+      for (let i = 0; i < tableAmount; i++) {
+        document.write("<table>");
+
+        for (let j = 0; j < tableRowAmount; j++) {
+          let number = 3 * j + (i * 9);
+
+          document.write("<tr>");
+
+          for (let k = 1; k <= tableColumnAmount; k++) {
+            document.write(`<td>${k + number}</td>`);
+          }
+
+          document.write("</tr>");
+        }
+
+        document.write("</table>");
+      }
+    </script>
+
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid #000;
+      }
+
+      table {
+        display: inline-block;
+        margin-right: 20px;
+      }
+    </style>
+  </body>
+</html>

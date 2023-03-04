@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
     <h2>Умова:</h2>
     <p>
-      Задача 7. З клавіатури вводиться номер місяця. Вивести до якої пори він відноситься
-
+      Задача 7. З клавіатури вводиться номер місяця. Вивести до якої пори він
+      відноситься
     </p>
     <h2>Результат:</h2>
 
     <script>
-      const monthNumber = parseInt(prompt('Month number?', 1));
+      const monthNumber = parseInt(prompt("Month number?", 1));
 
-      if (monthNumber <= 2 || monthNumber === 12 ) {
-        document.write('Winter');
+      if (monthNumber <= 2 || monthNumber === 12) {
+        document.write("Winter");
       } else if (monthNumber <= 5) {
-        document.write('Spring');
+        document.write("Spring");
       } else if (monthNumber <= 8) {
-        document.write('Summer');
+        document.write("Summer");
       } else if (monthNumber <= 11) {
-        document.write('Autumn');
+        document.write("Autumn");
       } else {
-        document.write('Wrong month number');
+        document.write("Wrong month number");
       }
     </script>
   </body>

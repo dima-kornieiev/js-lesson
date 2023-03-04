@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Умова:</h2>
+    <p>
+      Задача 15. Користувача поступово вводить показники температури протягом року. Знайти середню
+      температуру.
+    </p>
+    <h2>Результат:</h2>
+
+    <script>
+      const numberOfMonths = 12;
+      let temperature;
+      let temperatureSum = 0;
+      
+      for (let i = 0; i < numberOfMonths; i++) {
+        temperature = parseFloat(prompt('Temperature?'));
+        temperatureSum += temperature;
+      }
+
+      const averageTemperature = temperatureSum / numberOfMonths;
+
+      document.write(`${averageTemperature}`)
+    </script>
+  </body>
+</html>

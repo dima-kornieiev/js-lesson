@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Умова:</h2>
+    <p>
+      Задача 9. Користувач загадує число. Комп’ютер задає питання поки не вгадає
+      число користувача (використати confirm).
+    </p>
+    <h2>Результат:</h2>
+
+    <script>
+      const userMinNumber = 1;
+      const userMaxNumber = 10;
+      const userNumber = parseInt(prompt("User number from 1 to 10?"));
+      let computerGuessNumber;
+      let isNumberRight;
+
+      do {
+        computerGuessNumber = Math.floor(
+          Math.random() * (userMaxNumber - userMinNumber + 1) + userMinNumber
+        );
+
+        isNumberRight = confirm(`is it ${computerGuessNumber}?`);
+      } while (!isNumberRight);
+
+      document.write("Computer guessed right. End.");
+    </script>
+  </body>
+</html>

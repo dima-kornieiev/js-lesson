@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Умова:</h2>
+    <p>
+      Задача 5. Вивести таблицю
+    </p>
+    <h2>Результат:</h2>
+
+    <script>
+      const tableRowAmount = 3;
+      const tableColumnAmount = 3;
+
+      document.write("<table>");
+
+      for (let i = 0; i < tableRowAmount; i++) {
+        let number = 3 * i;
+
+        document.write("<tr>");
+
+        for (let j = 1; j <= tableColumnAmount; j++) {
+          document.write(`<td>${j + number}</td>`);
+        }
+
+        document.write("</tr>");
+      }
+
+      document.write("</table>");
+    </script>
+
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid #000;
+      }
+    </style>
+  </body>
+</html>
